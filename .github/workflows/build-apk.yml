@@ -102,6 +102,13 @@ jobs:
       - name: Déclarer l'application comme un jeu
         run: sed -i 's/<application/<application android:appCategory="game" android:isGame="true"/' android/app/src/main/AndroidManifest.xml
 
+      - name: Publicité AdMob (identifiant d'application)
+        run: |
+          # Identifiant de TEST Google : à remplacer par l'identifiant du compte AdMob avant publication
+          ADMOB_APP_ID="ca-app-pub-3940256099942544~3347511713"
+          sed -i "s|</application>|    <meta-data android:name=\"com.google.android.gms.ads.APPLICATION_ID\" android:value=\"$ADMOB_APP_ID\"/>\n    </application>|" android/app/src/main/AndroidManifest.xml
+          grep -q "gms.ads.APPLICATION_ID" android/app/src/main/AndroidManifest.xml
+
       - name: Copier le jeu
         run: npx cap sync android
 

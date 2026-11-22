@@ -1,5 +1,5 @@
 MILLÉNIUM ARCADE - 7 jeux rétro en pixel art (Syphax Apps)
-Tank Fort, Glouton, Haut Chantier, Casse-briques, Envahisseurs, Traversée, Cirque Pixel
+Tank Fort, Glouton, Haut Chantier, Casse-briques, Envahisseurs, Traversée, Flipper 3D, Cirque Pixel
 
 ANDROID - lien direct (toujours la dernière version) :
 https://github.com/AyBad/millenium-arcade/releases/latest/download/millenium-arcade.apk
@@ -12,3 +12,9 @@ Ouvrir dans Safari > Partager > « Sur l'écran d'accueil ». Plein écran, mise
 
 Le numéro de version est affiché en bas à gauche du menu.
 Chaque modification incrémente la version (APP_VERSION dans www/index.html).
+
+PUBLICITÉ (Android) : Google AdMob avec des identifiants de TEST.
+Avant publication, remplacer :
+- l'identifiant d'application dans .github/workflows/build-apk.yml (ADMOB_APP_ID)
+- les identifiants de bannière et d'interstitiel dans www/index.html (const ADMOB), et passer testing à false.
+MENTIONS LÉGALES : compléter const EDITEUR dans www/index.html (responsable, e-mail, adresse).
