@@ -1,10 +1,11 @@
 {
   "name": "millenium-arcade",
-  "version": "0.2.0",
+  "version": "0.4.0",
   "private": true,
   "dependencies": {
     "@capacitor-community/admob": "^6.2.0",
     "@capacitor/android": "^6.2.0",
+    "@capacitor/screen-orientation": "^6.0.3",
     "@capacitor/cli": "^6.2.0",
     "@capacitor/core": "^6.2.0"
   }
